@@ -13,4 +13,6 @@ class DocsKernel:
         self.docs = GoogleDocs(self.__token, config.google_api_scope)
         self.docs_service = self.docs.start_service()
 
-
+   def fetch_document_text(self, link:str) -> str:
+      raw_text = self.docs.get_text_from_document_using_link(link)
+      return raw_text
