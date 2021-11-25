@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# token and client secret file
+*token.json
+*client_secret.json
+
 # C extensions
 *.so
 
