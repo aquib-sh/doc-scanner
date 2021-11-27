@@ -1,0 +1,19 @@
+{
+    "1":{
+        "link":"https://docs.google.com/document/d/1w4gSqDc1K-Hh3LMKY1ZT0qua5z6L0Ym1s75eOOWf_Tk/edit",
+        "keywords":[
+            "COVID"
+        ],
+        "case_sensitive":true
+    },
+
+    "2":{
+        "link":"https://docs.google.com/document/d/1_qd6qTqsYgyVS0G5F3ttZ06VU2qhUSoIQRYXsGNDe7Y/edit",
+        "keywords":[
+            "Freedom",
+            "Linux",
+            "Right"
+        ], 
+        "case_sensitive":false
+    }
+}
