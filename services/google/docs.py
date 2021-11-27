@@ -19,6 +19,24 @@ class GoogleDocs(GoogleServices):
         """Builds Google Docs Service."""
         return super().start_service("docs", version)
 
+    def create_empty_document(self, title:str) -> str:
+        """Creates a Google Document.
+        
+        Parameters
+        ----------
+        title: str
+            title of the new document to create.
+
+        Returns
+        --------
+        document_id: str
+            ID of the document just created by this method.
+        """
+        doc = self.service.documents().create(
+            body={"title":title}
+        ).execute()
+        return doc['documentId']
+
     def create_document(self, body:dict) -> str:
         """Creates a Google Document.
         
