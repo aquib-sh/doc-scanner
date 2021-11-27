@@ -38,6 +38,30 @@ class GoogleDocs(GoogleServices):
         ).execute()
         return doc['documentId']
 
+    def insert_into_document(self, documentID:str, text:str):
+        """Inserts text into a Google Document from 1st position.
+        
+        Parameters
+        ----------
+        documentID: str
+            ID of the document you want to insert text to
+
+        text: str
+            text that is to be inserted into document.
+        """
+        requests = [
+                {
+                'insertText': {
+                    'location': {
+                        'index': 1,
+                    },
+                    'text': text
+                }
+            }
+        ]
+        result = self.service.documents().batchUpdate(
+            documentId=documentID, body={'requests': requests}).execute()
+        
     def __get_document_body(self, document_id:str):
         """Returns document body."""
         doc = self.service.documents().get(
